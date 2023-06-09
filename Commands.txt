@@ -18,4 +18,4 @@ ______________________
 
 git add .
 git commit -m "First commit"
-git push origin development
+git push origin
