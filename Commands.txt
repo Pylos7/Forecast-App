@@ -14,11 +14,17 @@ git push -u -f origin development
 
 
 
-Add Files/Make Changes
+Add Changes Make Commit
 ______________________
 
 git add .
 git commit -m "First commit"
+
+
+
+Push to GitHub
+_______________
+
 git push origin
 
 
@@ -35,7 +41,3 @@ Change Branches
 _______________
 
 git switch Branch-Name
-
-CHange 1
-
-Change 2
