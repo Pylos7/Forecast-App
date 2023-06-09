@@ -14,8 +14,8 @@ git push -u -f origin development
 
 
 
-Add Changes Make Commit
-______________________
+Add Changes and Make Commit
+____________________________
 
 git add .
 git commit -m "First commit"
