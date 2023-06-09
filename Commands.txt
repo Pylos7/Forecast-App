@@ -28,5 +28,12 @@ ____________________________________________
 git checkout -b Branch-Name
 git push -u -f origin Branch-Name
 
-Changest into development branch
+
+
+Change Branches
+_______________
+
+git switch Branch-Name
+
+CHange 1
 
