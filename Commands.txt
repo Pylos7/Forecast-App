@@ -1,5 +1,5 @@
-Create and Initialize Git Repo and Add remote
-______________________________
+Create and Initialize Git and GitHub Repos and Connect
+______________________________________________________
 
 Create Repository in GitHub
 cd Desktop
