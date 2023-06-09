@@ -19,3 +19,14 @@ ______________________
 git add .
 git commit -m "First commit"
 git push origin
+
+
+
+Create and Switch to Local and Remote Branch
+____________________________________________
+
+git checkout -b Branch-Name
+git push -u -f origin Branch-Name
+
+Changest into development branch
+
