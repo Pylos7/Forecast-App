@@ -22,9 +22,11 @@ git push origin
 
 
 
-Create a Local and Remote Branch
-________________________________
+Create and Switch to Local and Remote Branch
+____________________________________________
 
 git checkout -b Branch-Name
-git push origin Branch-Name
+git push -u -f origin Branch-Name
+
+Change
 
