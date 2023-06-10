@@ -49,7 +49,7 @@ def fetch_weather_data(api_key):
 	return data
 
 def main():
-	api_key = "19dc74c37a1a815b3e8e24f9e3706d52"
+	api_key = ""
 	data = fetch_weather_data(api_key)
 	display_weather_data(data)
 	visualize_weather_data(data)
