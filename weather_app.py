@@ -11,12 +11,12 @@ def display_weather_data(data):
 	print(f"\n{len(forecast)}-Day Forecast:")
 
 	for day in forecast:
-		print(f"\nDate/Time: {day['dt_txt']}")
-		print(f"Temperature: {int(day['main']['temp'])-273} °C")
-		print(f"Humidity: {int(data['list'][0]['main']['humidity'])} %")
+		print("\nDate/Time:", day['dt_txt'])
+		print("Temperature:", int(day['main']['temp'])-273, "°C")
+		print("Humidity:", int(data['list'][0]['main']['humidity']), "%")
 		
-		print("Min Temperature:", day["main"]["temp_min"])
-		print("Max Temperature:", day["main"]["temp_max"])
+		print("Min Temperature:", int(day["main"]["temp_min"])-273, "°C")
+		print("Max Temperature:", int(day["main"]["temp_max"])-273, "°C")
 		print("Pressure:", day["main"]["pressure"])
 		print("Weather:", day["weather"][0]["description"])
 		print("Wind Speed:", day["wind"]["speed"])
@@ -27,9 +27,10 @@ def display_weather_data(data):
 
 def visualize_weather_data(data):
 	# Extract relevant data for visualization (e.g., temperature, humidity) and plot a graph
-	dates = [day['date'] for day in data['forecast']]
-	temperatures = [day['temperature'] for day in data['forecast']]
-	humidities = [day['humidity'] for day in data['forecast']]
+	forecast = data['list']
+	dates = [day['dt_txt'] for day in forecast]
+	temperatures = [int(day['main']['temp'])-273 for day in forecast]
+	humidities = [int(data['list'][0]['main']['humidity']) for day in forecast]
 
 	plt.plot(dates, temperatures, label='Temperature (°C)')
 	plt.plot(dates, humidities, label='Humidity (%)')
@@ -49,7 +50,6 @@ def fetch_weather_data(api_key):
 
 def main():
 	api_key = "19dc74c37a1a815b3e8e24f9e3706d52"
-
 	data = fetch_weather_data(api_key)
 	display_weather_data(data)
 	visualize_weather_data(data)
